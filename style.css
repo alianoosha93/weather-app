@@ -1,0 +1,181 @@
+/* Your corrected CSS with the identified issues fixed goes here */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, rgba(183, 204, 246, 0.7), rgba(63, 82, 128, 0.67)), url(background.1.jpeg);
+    background-size: cover;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1 {
+    color: rgb(214, 147, 45);
+    text-decoration: underline;
+    font-family: 'orbitron', sans-serif;
+}
+#input {
+    font-size: 18px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background: aliceblue;
+}
+#search {
+    background: cadetblue;
+    padding: 2px 20px;
+    color: aliceblue;
+    outline: none;
+    font-size: 17px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    grid-column-gap: 25px;
+    align-items: center;
+    margin: 0 50px;
+    color: aliceblue;
+}
+#city {
+    font-size: 30px;
+}
+.weather {
+    text-align: center;
+    color: white;
+}
+.weather img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(240, 248, 255, 0.4);
+}
+#temperature {
+    font-size: 70px;
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.temp-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+#clouds {
+    font-size: 20px;
+    background: rgba(153, 205, 50, 0.75);
+    padding: 2px 20px;
+    border-radius: 15px;
+}
+.next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.next p {
+    margin: 3px ;
+}
+.cast-header {
+    color: aliceblue;
+    background: rgba(254, 189, 132, 0.5);
+    width: max-content;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.time, .date {
+    color: rgb(254, 189, 132);
+}
+.desc, .description {
+    color: rgb(196, 255, 77);
+    text-transform: capitalize;
+}
+.divider1, .divider2 {
+    background: rgba(254, 189, 132, 0.5);
+    height: 200px;
+    border-radius: 5px;
+}
+.divider2 {
+    height: 5px;
+    width: 30%;
+    margin: 0 auto;
+}
+.forecastD {
+    margin: 20px 50px;
+    color: aliceblue;
+}
+.weekF {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Your updated CSS with responsive styles goes here */
+@media only screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+
+    #city {
+        font-size: 25px;
+    }
+
+    .weather {
+        margin-top: 20px;
+    }
+
+    .temp-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #input {
+        width: 80%;
+    }
+
+    #search {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    main {
+        margin: 0 20px;
+    }
+
+    .temp-box {
+        margin: 20px 0;
+    }
+
+    #temperature {
+        font-size: 40px;
+    }
+
+    .cast-header {
+        font-size: 16px;
+    }
+
+    .divider1, .divider2 {
+        height: 100px;
+    }
+}
